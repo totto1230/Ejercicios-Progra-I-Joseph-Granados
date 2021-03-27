@@ -12,7 +12,9 @@ public class SistemaAerolinea {
     Cliente unicoCliente;
     Cliente segundoCliente;
     DestinoVIaje destino1;
-
+    
+   
+    
     public void iniciar() {
         Scanner s = new Scanner(System.in);
         System.out.println("Que quiere hacer? 1. Ingresar cliente \t 2. Configurar Destino");

@@ -15,7 +15,7 @@ public class Cliente {
     private String numCedula;
     private int numVuelo;
     private String nacionalidad;
-
+    int clientes;
     public Cliente(){
      }
     
