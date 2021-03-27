@@ -1,5 +1,5 @@
 //Segundo programa
-package com.mycompany.clasesemana2;
+package clasesemana2;
 public class MiSegundoPrograma {
     public static void main (String[] args){
     final String c3= "Joseph ";

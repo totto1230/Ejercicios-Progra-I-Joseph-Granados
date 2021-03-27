@@ -1,4 +1,4 @@
-package com.mycompany.clasesemana4;
+package clasesemana4;
 
 import java.util.Scanner;
 

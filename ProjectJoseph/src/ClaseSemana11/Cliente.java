@@ -20,9 +20,13 @@ public class Cliente {
         Scanner s = new Scanner(System.in);
         System.out.println("Favor digite su nombre: ");
         this.nombre = s.next();
+        System.out.println("Favor digite su apellidos: ");
         this.apellidos = s.next();
+        System.out.println("Favor digite su Cedula: ");
         this.numCedula = s.next();
+        System.out.println("Favor digite su vuelo: ");
         this.numVuelo = s.nextInt();
+        System.out.println("Favor digite su nacionalidad: ");
         this.nacionalidad = s.next();
 
     }
