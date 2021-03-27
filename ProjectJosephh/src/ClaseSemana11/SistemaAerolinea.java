@@ -5,11 +5,15 @@
  */
 package ClaseSemana11;
 
+import java.util.Scanner;
+
 public class SistemaAerolinea {
     Cliente unicoCliente;
     Cliente segundoCliente;
     
     public void iniciar(){
+        Scanner s= new Scanner(System.in);
+       
         unicoCliente = new Cliente();
         segundoCliente = new Cliente(); 
         
@@ -28,4 +32,5 @@ public class SistemaAerolinea {
  
         System.out.println(this.segundoCliente.toString());
     }
+   
 }
