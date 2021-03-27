@@ -1,6 +1,6 @@
 package clasesemana8;
 
-public class ClaseSemana8 {
+public class ClaseSemana8g {
     String nombre;
     String licencia;
     int numLicencia;
