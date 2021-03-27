@@ -16,29 +16,37 @@ public class SistemaAerolinea {
     public void iniciar() {
         Scanner s = new Scanner(System.in);
         System.out.println("Que quiere hacer? 1. Ingresar cliente \t 2. Configurar Destino");
+        int op = s.nextInt();
         while (true) {
-            int op = s.nextInt();
 
             switch (op) {
 
                 case 1:
                     unicoCliente = new Cliente();
                     segundoCliente = new Cliente();
+                    unicoCliente.solicitarDatos();
+                    segundoCliente.solicitarDatos();
+
                     break;
 
                 case 2:
                     destino1 = new DestinoVIaje();
                     destino1.Datos();
-                    System.out.println(this.destino1.toString());
+                    
                     break;
+
+                case 3:
+                    System.out.println(this.destino1.toString());
+                    System.out.println(this.segundoCliente.toString());
+                    System.out.println(this.segundoCliente.toString());
             }
-/*
+            /*
             solicitarDatosCliente();
             generarReporteClientes();*/
         }
     }
 
-   /*public void solicitarDatosCliente() {
+    /*public void solicitarDatosCliente() {
         unicoCliente.solicitarDatos();
         segundoCliente.solicitarDatos();
     }
@@ -49,5 +57,4 @@ public class SistemaAerolinea {
 
         System.out.println(this.segundoCliente.toString());
     }*/
-
 }

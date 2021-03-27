@@ -16,6 +16,11 @@ public class Cliente {
     private int numVuelo;
     private String nacionalidad;
 
+    public Cliente(){
+     }
+    
+    
+    
     public void solicitarDatos() {
         Scanner s = new Scanner(System.in);
         System.out.println("Favor digite su nombre: ");

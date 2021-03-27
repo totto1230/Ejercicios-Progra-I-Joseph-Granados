@@ -11,9 +11,13 @@ public class DestinoVIaje {
 
     public void Datos() {
         Scanner s = new Scanner(System.in);
+        System.out.println("distancia");
         this.distancia = s.nextFloat();
+        System.out.println("duracion");
         this.duracion = s.nextDouble();
+        System.out.println("precios");
         this.precios = s.nextInt();
+        System.out.println("pais");
         this.pais = s.next();
     }
 
