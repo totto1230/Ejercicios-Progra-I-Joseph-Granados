@@ -1,0 +1,11 @@
+
+package decimaClase;
+
+public class Tester {
+    public static void main(String[]args){
+      ClaseDecima t= new ClaseDecima();
+      t.print();
+    
+    
+}
+}
