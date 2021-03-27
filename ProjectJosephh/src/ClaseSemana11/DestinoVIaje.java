@@ -1,20 +1,22 @@
-
 package ClaseSemana11;
 
+import java.util.Scanner;
+
 public class DestinoVIaje {
+
     String pais;
     double duracion;
     float distancia;
     int precios;
 
-    
-    
-    
-    
-    
-    
-    
-    
+    public void Datos() {
+        Scanner s = new Scanner(System.in);
+        this.distancia = s.nextFloat();
+        this.duracion = s.nextDouble();
+        this.precios = s.nextInt();
+        this.pais = s.next();
+    }
+
     @Override
     public String toString() {
         return "DestinoVIaje{" + "pais=" + pais + ", duracion=" + duracion + ", distancia=" + distancia + ", precios=" + precios + '}';
@@ -51,5 +53,5 @@ public class DestinoVIaje {
     public void setPrecios(int precios) {
         this.precios = precios;
     }
-     
+
 }

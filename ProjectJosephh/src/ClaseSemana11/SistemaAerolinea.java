@@ -8,29 +8,46 @@ package ClaseSemana11;
 import java.util.Scanner;
 
 public class SistemaAerolinea {
+
     Cliente unicoCliente;
     Cliente segundoCliente;
-    
-    public void iniciar(){
-        Scanner s= new Scanner(System.in);
-       
-        unicoCliente = new Cliente();
-        segundoCliente = new Cliente(); 
-        
-        solicitarDatosCliente();
-        generarReporteClientes();
+    DestinoVIaje destino1;
+
+    public void iniciar() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Que quiere hacer? 1. Ingresar cliente \t 2. Configurar Destino");
+        while (true) {
+            int op = s.nextInt();
+
+            switch (op) {
+
+                case 1:
+                    unicoCliente = new Cliente();
+                    segundoCliente = new Cliente();
+                    break;
+
+                case 2:
+                    destino1 = new DestinoVIaje();
+                    destino1.Datos();
+                    System.out.println(this.destino1.toString());
+                    break;
+            }
+/*
+            solicitarDatosCliente();
+            generarReporteClientes();*/
+        }
     }
-    
-    public void solicitarDatosCliente(){
+
+   /*public void solicitarDatosCliente() {
         unicoCliente.solicitarDatos();
         segundoCliente.solicitarDatos();
     }
-    
-    public void generarReporteClientes(){
-   
+
+    public void generarReporteClientes() {
+
         System.out.println(this.unicoCliente.toString());
- 
+
         System.out.println(this.segundoCliente.toString());
-    }
-   
+    }*/
+
 }
