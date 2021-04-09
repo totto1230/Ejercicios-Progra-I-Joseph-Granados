@@ -11,10 +11,10 @@ public class Conversiones {
         Scanner s = new Scanner(System.in);
 
         boolean conteo = true;
-        System.out.println("1. Dolar\n 2. Euro \n 3. Colones");
+       // System.out.println("1. Dolar\n 2. Euro \n 3. Colones");
 
         while (conteo == true) {
-
+            System.out.println("1. Dolar\n 2. Euro \n 3. Colones");
             int select = s.nextInt();
             switch (select) {
                 case (1):
