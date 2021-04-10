@@ -13,7 +13,7 @@ public class SistemaAerolinea {
     Cliente segundoCliente;
     DestinoVIaje destino1;
     
-   
+    
     
     public void iniciar() {
         Scanner s = new Scanner(System.in);
@@ -41,6 +41,7 @@ public class SistemaAerolinea {
                     System.out.println(this.destino1.toString());
                     System.out.println(this.segundoCliente.toString());
                     System.out.println(this.segundoCliente.toString());
+                    
             }
             /*
             solicitarDatosCliente();

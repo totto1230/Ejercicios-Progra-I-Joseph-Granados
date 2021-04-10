@@ -16,8 +16,8 @@ public class Cliente {
     private int numVuelo;
     private String nacionalidad;
     int clientes;
-    public Cliente(){
-     }
+   /*public Cliente(){
+     }*/
     
     
     
