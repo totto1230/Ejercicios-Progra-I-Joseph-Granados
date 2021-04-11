@@ -1,6 +1,5 @@
 package problema5proyecto;
 
-import java.util.Arrays;
 import java.util.Scanner;
 //private int Conjunto1;
 
@@ -17,10 +16,10 @@ public class PedirNum {
             es decir el famoso "array.length"
          */
         Scanner s = new Scanner(System.in);
-        System.out.println("Numero de ints quiere meter en el primer conjunto");
+        System.out.println("Digite el numero de enteros quiere meter en el primer conjunto");
         this.espacios = s.nextInt();
         cont1 = new int[espacios];
-        System.out.println("Numero de ints quiere meter en el segundo conjunto");
+        System.out.println("Digite el numero de enteros quiere meter en el segundo conjunto");
         this.espacios2 = s.nextInt();
         cont2 = new int[espacios2];
 
