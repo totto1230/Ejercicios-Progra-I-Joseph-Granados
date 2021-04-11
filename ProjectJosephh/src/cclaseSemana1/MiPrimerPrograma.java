@@ -1,7 +1,7 @@
 /*
 El programa es el primero que estoy haciendo.
  */
-package ClaseSemana1;
+package cclaseSemana1;
 
 /*
 @author Joseph Granados

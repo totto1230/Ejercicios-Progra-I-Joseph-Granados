@@ -1,4 +1,4 @@
-package ClaseSemana11;
+package claaseSemana11;
 
 public class EjemploArreglo {
 
