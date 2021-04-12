@@ -3,16 +3,21 @@ package problema3proyecto;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
-import javax.swing.JComponent;
+import java.util.Random;
+
 
 public class Paint extends Canvas {
-
+    
+    @Override
     public void paint(Graphics g) {
+        Random random= new Random();
+        int[] randomArray= new int [1000];
         
         
-        g.setColor(Color.CYAN);
-        g.drawOval(10, 10, 200, 200);
-        
+        while (true) {
+            g.setColor(Color.CYAN);
+            g.fillOval(random.nextInt(15),random.nextInt(15), random.nextInt(4),random.nextInt(5));
 
+        }
     }
 }
