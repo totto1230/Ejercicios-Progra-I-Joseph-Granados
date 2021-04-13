@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 
 public class Tester extends Canvas {
 
-    public static void main(String[] a) {
+    public static void main(String[] args) {
         Paint p = new Paint();
         
         JFrame jf = new JFrame("Test");
