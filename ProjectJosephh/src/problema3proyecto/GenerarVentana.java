@@ -1,36 +1,26 @@
 package problema3proyecto;
 
-import java.awt.Color;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class GenerarVentana extends JFrame {
-    Paint object;
+
     
-    public void GenerarVentana() {
-        this.setVisible(true);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setTitle("ProyectoProblemaTres");
+
+    public void Ventana() {
+        this.setSize(500, 500);
         this.setBounds(700, 250, 500, 500);
-      
-        object = new Paint();
-        Iniciar();
-        
+        this.setVisible(true);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setTitle("Problema3Proyecto");
+        panel();
+
     }
-    
-    
-    private void Iniciar(){
-        JPanel p= new JPanel();
+
+    private void panel() {
+        JFrame j = new JFrame();
+        j.getContentPane().add(j);
         
-        p.setBackground(Color.red);
-        this.getContentPane().add(p); //Agregar el panel a la ventana
-        
-        
-        
-        
+
     }
-    
-    
-    
 
 }
