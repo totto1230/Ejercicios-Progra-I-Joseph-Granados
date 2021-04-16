@@ -2,20 +2,25 @@
 
 package problema3proyecto;
 
-import java.awt.Canvas;
+
+import javax.swing.JFrame;
 
 
-public class Testerr extends Canvas{
+public class Testerr extends JFrame{
+    
     public static void main(String[] args) {
         
-        GenerarVentana g= new GenerarVentana();
-        g.Ventana();
-        Paint p= new Paint();
+       
         
+       GenerarVentana p= new GenerarVentana();
+       p.Ventana();
+       
         
         
         
     }
+
+   
     
     
     

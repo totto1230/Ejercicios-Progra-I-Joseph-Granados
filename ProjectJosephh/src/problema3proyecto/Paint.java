@@ -5,10 +5,12 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Random;
 import java.util.Scanner;
+import javax.swing.JPanel;
+
 
 public class Paint extends Canvas {
     //Propiedades Ovalo
-
+    GenerarVentana objeto;
     public static int x;
     public static int y;
     public static int width;
@@ -22,6 +24,8 @@ public class Paint extends Canvas {
 
     @Override
     public void paint(Graphics g) {
+        objeto = new GenerarVentana();
+        objeto.Ventana();
         Random ran = new Random();
         super.paint(g);
         Scanner s = new Scanner(System.in);
@@ -50,4 +54,8 @@ public class Paint extends Canvas {
             g.setColor(Color.red);
         }
  //   }
+
+    
+
+ 
 }
