@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prueba;
+package problema3proyectoprueba;
 
 /**
  *
  * @author josep
  */
-public class Tester {
-    
+public class tester {
+
+    public static void main(String[] args) {
+
+        GenerarVentana p = new GenerarVentana();
+        p.Ventana();
+
+    }
 }

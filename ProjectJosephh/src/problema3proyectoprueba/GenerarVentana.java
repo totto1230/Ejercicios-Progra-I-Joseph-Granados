@@ -1,4 +1,9 @@
-package problema3proyecto;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package problema3proyectoprueba;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -7,7 +12,12 @@ import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+/**
+ *
+ * @author josep
+ */
 public class GenerarVentana extends JFrame {
+
     //Propiedades Ovalo
     // Paint o;
     public static int x;
@@ -20,9 +30,7 @@ public class GenerarVentana extends JFrame {
     public static int yy;
     public static int widthh;
     public static int heightt;
-    
-    
-    
+
     public void Ventana() {
 
         this.setBounds(700, 250, 500, 500);
@@ -30,25 +38,29 @@ public class GenerarVentana extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Problema3Proyecto");
         panel();
-     //   o= new Paint();
+        GenerarVentana oval= new GenerarVentana();
         
+    
+        oval.add(oval);
         
+        /* o= new Paint();
+        repaint();*/
+
     }
 
     private void panel() {
         JPanel j = new JPanel();
         this.getContentPane().add(j);
         // j.repaint();
-        
 
     }
 
-   @Override
+    @Override
     public void paint(Graphics g) {
         Random ran = new Random();
         super.paint(g);
         Scanner s = new Scanner(System.in);
-       // int a = s.nextInt();
+        // int a = s.nextInt();
 
         //Generar numero random 0-999 OVAL
         x = ran.nextInt(500);
@@ -62,7 +74,7 @@ public class GenerarVentana extends JFrame {
         widthh = ran.nextInt(500);
         heightt = ran.nextInt(500);
 
-     //  for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             //Generar Ovalo
             g.fillOval(x, y, width, height);
             g.setColor(Color.red);
@@ -70,6 +82,6 @@ public class GenerarVentana extends JFrame {
             //Generar Rectangulo
             g.fillRect(xx, yy, widthh, heightt);
             g.setColor(Color.red);
-       // }
+        }
     }
 }
