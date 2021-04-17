@@ -9,10 +9,6 @@ package claseSemana13;
  *
  * @author josep
  */
-public class NewClass {
-  
-    
-    
-    
+public class Tester {
     
 }
