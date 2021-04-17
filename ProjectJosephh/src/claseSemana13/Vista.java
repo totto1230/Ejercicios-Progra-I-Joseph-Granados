@@ -16,8 +16,8 @@ public class Vista {
     
     
 
-    public Vista(Modelo modelo) {
-        this.modelo = modelo;
+    public Vista(Modelo mm) {
+        this.modelo = mm;
     }
     
     
