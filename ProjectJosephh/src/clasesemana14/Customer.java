@@ -10,7 +10,7 @@ public class Customer extends Usuario {
     private String creditCardInfo;
     private String shippingInfo;
     private float accountBalance;
-    
+    private Pedido[] pedidos;
     
     public void register(){}
     public void login(){}
@@ -23,6 +23,7 @@ public class Customer extends Usuario {
         this.creditCardInfo = creditCardInfo;
         this.shippingInfo = shippingInfo;
         this.accountBalance = accountBalance;
+        pedidos= new Pedido[100];
     }
 
     public String getCustomerName() {
