@@ -6,6 +6,13 @@ public class Perro {
     public static int contador;
     public String color;
     
+    public static void aumento(){
+        contador++;
+        System.out.println(contador);
+    
+    
+}
+    
     
     public Perro() {
      
@@ -20,6 +27,8 @@ public class Perro {
     public String toString() {
         return "Perro{" + "nombre=" + nombre + ", color=" + color + '}';
     }
+
+   
 
     public static void setContador(int contador) {
         Perro.contador = contador;
