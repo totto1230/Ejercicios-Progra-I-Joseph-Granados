@@ -5,11 +5,28 @@
  */
 package clasesemana14;
 
+import java.util.Date;
+
 public class Usuario {
 
-    private String userId;
-    private String password;
-    private String loginStatus;
+    protected String userId;
+    protected String password;
+    protected String loginStatus;
+    protected Date registerDate;
+    
+    public boolean verifyLogin(){
+        
+        
+        
+        return true;
+        
+        
+        
+    }
+    
+    
+    
+    
     
 
 }
