@@ -16,6 +16,15 @@ public class Tester {
         System.out.println(p1.color);
         System.out.println(p2.color);
        // System.out.println(Perro.contador);
+       
+       if(p1.equals(p2)){
+           System.out.println("Si");
+           
+       }
+       else{
+           System.out.println("no");
+       }
+       
     }
 
 }

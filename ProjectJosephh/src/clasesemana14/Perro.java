@@ -1,6 +1,8 @@
 
 package clasesemana14;
 
+import java.util.Objects;
+
 public class Perro {
     public String nombre;
     public static int contador;
@@ -12,6 +14,31 @@ public class Perro {
     
     
 }
+
+  /*  @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 83 * hash + Objects.hashCode(this.nombre);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Perro other = (Perro) obj;
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        return true;
+    }*/
     
     
     public Perro() {
