@@ -10,5 +10,19 @@ package problema6proyectoJosephGranados;
  * @author josep
  */
 public class Tester {
+    public static void main(String[] args) {
+        
+        SistemaNotasControlador s = new SistemaNotasControlador();
+        s.iniciar();
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
     
 }

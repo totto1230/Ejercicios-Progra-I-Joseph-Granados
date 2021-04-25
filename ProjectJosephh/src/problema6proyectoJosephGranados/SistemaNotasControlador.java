@@ -1,14 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package problema6proyectoJosephGranados;
 
-/**
- *
- * @author josep
- */
 public class SistemaNotasControlador {
+
+    private SistemaNotasReporte Report;
+    private  SistemaNotasInterfaz Inter;
+    
+    
+    
+    public void iniciar(){
+       
+        Inter= new SistemaNotasInterfaz();
+        Report= new SistemaNotasReporte(Inter.generarEst());
+        Inter.imprimir();
+ 
+        
+    }
+    
+    
+    
+    
 
 }

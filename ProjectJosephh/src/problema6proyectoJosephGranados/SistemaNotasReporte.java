@@ -10,31 +10,54 @@ package problema6proyectoJosephGranados;
  * @author josep
  */
 public class SistemaNotasReporte {
-    private double [] notas;
+    protected int [] notas;
+    int ind;
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public SistemaNotasReporte() {
+    }
 
+    public SistemaNotasReporte(int CantEst) {
+        this.notas= new int[CantEst];
+        ind=0;
+    }
+    
+    
+    
+    public void agregarNota(int nota){
+        
+        for(int i=0; i<notas.length; i++){
+            
+            notas[i]=nota;
+       }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/*
     /**
      Enseña todos los exámenes
      */
 
     public String generarReporteTodosExamenes(){
+        
+        
+        
+        
+        
+        return null;
         
         
         
@@ -51,6 +74,10 @@ public class SistemaNotasReporte {
         
         
         
+        return null;
+        
+        
+        
     }
     
     /**
@@ -60,12 +87,20 @@ public class SistemaNotasReporte {
         
         
         
+        return null;
+        
+        
+        
     }
 
     /*
    Ordena las Notas por Nota Ascendiente
      */
     public String generarReporteTodosExamenesOrdenadosPor(String propiedad){
+    
+    
+    
+        return null;
     
     
     
