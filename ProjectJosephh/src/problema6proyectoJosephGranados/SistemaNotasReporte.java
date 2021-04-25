@@ -12,12 +12,15 @@ import java.util.Arrays;
  * @author josep
  */
 public class SistemaNotasReporte {
+
     public int contador;
     public double promedio;
-    public int[] notas;
     private int ind;
     private int indd;
+    private int inddd;
+    public int[] notas;
     public String[] nombresAlum;
+    public String[] nombresPapas;
 
     /**
      * Metodo constructor default
@@ -30,7 +33,16 @@ public class SistemaNotasReporte {
      */
     public void guardarCampAlum(int CantEst) {
         this.nombresAlum = new String[CantEst];
+        this.nombresPapas = new String[CantEst];
         indd = 0;
+        inddd = 0;
+    }
+
+    public void guardarCampPap(int CantEst) {
+
+        this.nombresPapas = new String[CantEst];
+
+        inddd = 0;
     }
 
     /**
@@ -45,12 +57,21 @@ public class SistemaNotasReporte {
     }
 
     /**
-     *Agregar nombres a los estudiantes
-     * 
+     * Agregar nombres a los estudiantes
+     *
      */
     public void agregarNombreAlum(String nombre) {
-        this.nombresAlum[indd]= nombre;
+        this.nombresAlum[indd] = nombre;
         indd++;
+    }
+
+    /**
+     * Agregar nombre papa o mama
+     *
+     */
+    public void agregarNombrePap(String nombre) {
+        this.nombresPapas[inddd] = nombre;
+        inddd++;
     }
 
     /**
@@ -92,34 +113,20 @@ public class SistemaNotasReporte {
     }
 
     /**
-     * Muestra la info del estudiante, nombre y apellidos de el alumno y de los
-     * papás
-     *
-     *
-     */
-    public String generarReporteTodosAlumnos() {
-
-        return null;
-
-    }
-
-    /**
      * Cuenta las notas menores a 70
-     * @return 
+     *
+     * @return
      */
-    public int generarReporteAlumnosConNotaInferiorA(int nota) {
-        
-        if (nota<70){
-            contador++;
-            
-        }
-        else{
-            contador=+0;
-        }
-       return contador;
-    }
+    public void generarReporteAlumnosConNotaInferiorA(int nota) {
 
-   
+        if (nota < 70) {
+            contador++;
+
+        } else {
+            contador = +0;
+        }
+       
+    }
 
     /**
      * metodo GET

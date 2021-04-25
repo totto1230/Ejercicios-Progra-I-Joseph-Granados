@@ -11,6 +11,7 @@ public class SistemaNotasControlador {
         //Estas variables sirven para digitar N veces el valor en el ARRAY
         int i = 0;
         int j = 0;
+        int k = 0;
 
         //Agregar el lenght al array; es decir, reservar espacio
         Inter.generarEst();
@@ -19,16 +20,19 @@ public class SistemaNotasControlador {
         //AGREGAMOS LAS NOTAS AL ARRAY
         while (i < Report.notas.length) {
             Inter.digitarNota();
-            Report.agregarNota(Inter.nota);
             Report.generarReporteAlumnosConNotaInferiorA(Inter.nota);
+
+            Report.agregarNota(Inter.nota);
+
             i++;
         }
 
         //Sirve para ordenar el array de mayor a menor
         Report.generarReporteTodosExamenesOrdenadosPor(Report.notas);
 
-        //Agregar el lenght al array de nombres; es decir, reservar espacio
+        //Agregar el length al array de nombres; es decir, reservar espacio
         Report.guardarCampAlum(Inter.cantEst);
+        Report.guardarCampPap(Inter.cantEst);
 
         //AGREGAMOS NOMBRES
         while (j < Report.nombresAlum.length) {
@@ -36,8 +40,24 @@ public class SistemaNotasControlador {
             Report.agregarNombreAlum(Inter.nombre);
             j++;
         }
+
+        //Digitar Nombres PAPAS
+        while (k < Report.nombresPapas.length) {
+            Inter.digitarNameP(Report.nombresAlum);
+            Report.agregarNombrePap(Inter.nombreP);
+            
+            k++;
+        }
+
         //Impresión del ARRAY
-        Inter.imprimir(Report.notas, Report.promedio, Report.nombresAlum, Report.contador);
+        Inter.imprimirNota(Report.notas, Report.nombresAlum);
+
+        //IMPRIMIR ESTADISTICAS
+        Inter.estadisticas(Report.notas, Report.promedio, Report.contador);
+        
+        //IMPRIMIR INFORMACION ESTU
+        Inter.informacionEstu(Report.nombresAlum,Report.nombresPapas);
+      
 
     }
 
