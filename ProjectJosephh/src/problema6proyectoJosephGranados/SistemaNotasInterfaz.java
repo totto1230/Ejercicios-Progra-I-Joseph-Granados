@@ -7,7 +7,7 @@ public class SistemaNotasInterfaz {
 
     int nota;
     public int cantEst;
-    SistemaNotasReporte impr = new SistemaNotasReporte();
+    //SistemaNotasReporte model = new SistemaNotasReporte();
     
     Scanner s = new Scanner(System.in);
 
@@ -25,5 +25,15 @@ public class SistemaNotasInterfaz {
       
     }
 
+    /**
+     *Este método sirve para imprimir la nota más baja y la más alta
+     */
+    public void imprimir(int[] array, double promedio){
+      int a= array.length;
+      
+      System.out.println("La nota más alta fue: "+ array [(a-1)]);
+      System.out.println("La nota más baja fue: "+ array[0]);
+      System.out.println("El promedio de las notas es: "+ promedio );
+  } 
    
 }

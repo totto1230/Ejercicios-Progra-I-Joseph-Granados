@@ -13,51 +13,69 @@ import java.util.Arrays;
  */
 public class SistemaNotasReporte {
 
+    public double promedio;
     public int[] notas;
-    int ind;
+    private int ind;
 
     /**
-     Metodo constructor default
+     * Metodo constructor default
      */
     public SistemaNotasReporte() {
     }
 
     /**
      * Guardan la cantidad de espacios del arreglo dependiendo del numero de est
-     *  Metodo constructor para guardar espacis
+     * Metodo constructor para guardar espacis
+     *
      * @param CantEst
      */
-    
     public SistemaNotasReporte(int CantEst) {
         this.notas = new int[CantEst];
         ind = 0;
     }
 
     /**
-     metodo GET
+     * metodo GET
      */
     public int getNotas(int i) {
         return notas[i];
     }
 
     /**
-     *Metodo para Agregar las notas al array
+     * Metodo para Agregar las notas al array
      */
     public void agregarNota(int nota) {
 
         notas[ind] = nota;
         ind++;
-     // System.out.println(Arrays.toString(notas)); 
+        // System.out.println(Arrays.toString(notas)); 
     }
 
-    
     /*
     /**
-     Enseña todos los exámenes, más una nota promedio, el más alto y el más bajo
+     Metodo para calcular la nota promedio, la más alta y la más baja
+    Se utiliza el famoso bubblesort para ordenarlo de mayor a menor. En pocas palabras este metodo es estadistico.    
      */
-    public String generarReporteTodosExamenes() {
+    public void generarReporteTodosExamenes(int[] array) {
+        int suma = 0;
+        int n = array.length;
+        int temp = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < (n - i); j++) {
+                if (array[j - 1] > array[j]) {
+                    //swap elements  
+                    temp = array[j - 1];
+                    array[j - 1] = array[j];
+                    array[j] = temp;
 
-        return null;
+                }
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            suma = suma + array[i];
+
+        }
+        this.promedio = suma / array.length;
 
     }
 

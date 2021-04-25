@@ -5,10 +5,11 @@ import java.util.Arrays;
 public class SistemaNotasControlador {
 
     private SistemaNotasReporte Report;
-    private SistemaNotasInterfaz Inter = new SistemaNotasInterfaz();
+    private final SistemaNotasInterfaz Inter = new SistemaNotasInterfaz();
 
     public void iniciar() {
         int i = 0;
+        
         //Agregar el lenght al array
         Inter.generarEst();
         Report = new SistemaNotasReporte(Inter.cantEst);
@@ -19,7 +20,12 @@ public class SistemaNotasControlador {
             Report.agregarNota(Inter.nota);
             i++;
         }
-      System.out.println(Arrays.toString(Report.notas));
+        
+        //Sirve para ordenar el array de mayor a menor
+        Report.generarReporteTodosExamenes(Report.notas);
+        Inter.imprimir(Report.notas, Report.promedio);
+    
+    
     }
 
 }
