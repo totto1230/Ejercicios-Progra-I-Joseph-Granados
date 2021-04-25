@@ -16,11 +16,21 @@ public class SistemaNotasReporte {
     public double promedio;
     public int[] notas;
     private int ind;
+    private int indd;
+    public String[] nombresAlum;
 
     /**
      * Metodo constructor default
      */
     public SistemaNotasReporte() {
+    }
+
+    /**
+     * Guardar cantidad de espacio para nombres
+     */
+    public void guardarCampAlum(int CantEst) {
+        this.nombresAlum = new String[CantEst];
+        indd = 0;
     }
 
     /**
@@ -35,10 +45,12 @@ public class SistemaNotasReporte {
     }
 
     /**
-     * metodo GET
+     *Agregar nombres a los estudiantes
+     * 
      */
-    public int getNotas(int i) {
-        return notas[i];
+    public void agregarNombreAlum(String nombre) {
+        this.nombresAlum[indd]= nombre;
+        indd++;
     }
 
     /**
@@ -48,13 +60,13 @@ public class SistemaNotasReporte {
 
         notas[ind] = nota;
         ind++;
-        // System.out.println(Arrays.toString(notas)); 
+
     }
 
-    /*
     /**
-     Metodo para calcular la nota promedio, la más alta y la más baja
-    Se utiliza el famoso bubblesort para ordenarlo de mayor a menor. En pocas palabras este metodo es estadistico.    
+     * Metodo para calcular la nota promedio, la más alta y la más baja Se
+     * utiliza el famoso bubblesort para ordenarlo de mayor a menor. En pocas
+     * palabras este metodo es estadistico.
      */
     public void generarReporteTodosExamenes(int[] array) {
         int suma = 0;
@@ -107,6 +119,13 @@ public class SistemaNotasReporte {
 
         return null;
 
+    }
+
+    /**
+     * metodo GET
+     */
+    public int getNotas(int i) {
+        return notas[i];
     }
 
 }

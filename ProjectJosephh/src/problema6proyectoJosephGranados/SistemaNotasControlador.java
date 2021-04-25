@@ -8,9 +8,11 @@ public class SistemaNotasControlador {
     private final SistemaNotasInterfaz Inter = new SistemaNotasInterfaz();
 
     public void iniciar() {
+        //Esta variable sirve para digitar N veces el valor en el ARRAY
         int i = 0;
-        
-        //Agregar el lenght al array
+        int j = 0;
+
+        //Agregar el lenght al array; es decir, reservar espacio
         Inter.generarEst();
         Report = new SistemaNotasReporte(Inter.cantEst);
 
@@ -20,12 +22,22 @@ public class SistemaNotasControlador {
             Report.agregarNota(Inter.nota);
             i++;
         }
-        
+
         //Sirve para ordenar el array de mayor a menor
         Report.generarReporteTodosExamenes(Report.notas);
-        Inter.imprimir(Report.notas, Report.promedio);
-    
-    
+
+        //Agregar el lenght al array de nombres; es decir, reservar espacio
+        Report.guardarCampAlum(Inter.cantEst);
+
+        //AGREGAMOS NOMBRES
+        while (j < Report.nombresAlum.length) {
+            Inter.digitarnName();
+            Report.agregarNombreAlum(Inter.nombre);
+            j++;
+        }
+        //Impresión del ARRAY
+        Inter.imprimir(Report.notas, Report.promedio, Report.nombresAlum);
+
     }
 
 }
