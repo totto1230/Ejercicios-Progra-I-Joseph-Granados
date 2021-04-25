@@ -12,111 +12,83 @@ import java.util.Arrays;
  * @author josep
  */
 public class SistemaNotasReporte {
-    public int [] notas;
+
+    public int[] notas;
     int ind;
-    
-   public SistemaNotasReporte() {
+
+    /**
+     Metodo constructor default
+     */
+    public SistemaNotasReporte() {
     }
 
     /**
-     *Guardan la cantidad de espacios del arreglo dependiendo del numero de est
+     * Guardan la cantidad de espacios del arreglo dependiendo del numero de est
+     *  Metodo constructor para guardar espacis
      * @param CantEst
      */
     
-    //Metodo constructor para guardar espacis
     public SistemaNotasReporte(int CantEst) {
-        this.notas= new int[CantEst];
-        ind=0;
+        this.notas = new int[CantEst];
+        ind = 0;
     }
-    
-    
-    
-    public void agregarNota(int nota){
-        
-        
-            while(ind<notas.length){
-                notas[ind]=nota;
-                ind++;
-            }
-            
-            
-            System.out.println(Arrays.toString(notas));
-            }
+
+    /**
+     metodo GET
+     */
+    public int getNotas(int i) {
+        return notas[i];
+    }
+
+    /**
+     *Metodo para Agregar las notas al array
+     */
+    public void agregarNota(int nota) {
+
+        notas[ind] = nota;
+        ind++;
+     // System.out.println(Arrays.toString(notas)); 
+    }
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-/*
+    /*
     /**
-     Enseña todos los exámenes
+     Enseña todos los exámenes, más una nota promedio, el más alto y el más bajo
      */
+    public String generarReporteTodosExamenes() {
 
-    public String generarReporteTodosExamenes(){
-        
-        
-        
-        
-        
         return null;
-        
-        
-        
-        
-        
+
     }
-    
+
     /**
-     Muestra la info del estudiante, nombre y apellidos de el alumno y de los papás
-     * 
-     * 
+     * Muestra la info del estudiante, nombre y apellidos de el alumno y de los
+     * papás
+     *
+     *
      */
-    public String generarReporteTodosAlumnos(){
-        
-        
-        
+    public String generarReporteTodosAlumnos() {
+
         return null;
-        
-        
-        
+
     }
-    
+
     /**
-     Muestra las notas más bajas a 70 
+     * Muestra las notas más bajas a 70
      */
-    public String generarReporteAlumnosConNotaInferiorA(int nota){
-        
-        
-        
+    public String generarReporteAlumnosConNotaInferiorA(int nota) {
+
         return null;
-        
-        
-        
+
     }
 
     /*
    Ordena las Notas por Nota Ascendiente
      */
-    public String generarReporteTodosExamenesOrdenadosPor(String propiedad){
-    
-    
-    
+    public String generarReporteTodosExamenesOrdenadosPor(String propiedad) {
+
         return null;
-    
-    
-    
+
     }
-    
-    
+
 }
