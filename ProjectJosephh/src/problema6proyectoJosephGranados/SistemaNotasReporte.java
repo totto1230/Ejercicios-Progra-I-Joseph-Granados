@@ -5,6 +5,8 @@
  */
 package problema6proyectoJosephGranados;
 
+import java.util.Arrays;
+
 /**
  *
  * @author josep
@@ -24,7 +26,7 @@ public class SistemaNotasReporte {
     //Metodo constructor para guardar espacis
     public SistemaNotasReporte(int CantEst) {
         this.notas= new int[CantEst];
-       
+        ind=0;
     }
     
     
@@ -32,12 +34,16 @@ public class SistemaNotasReporte {
     public void agregarNota(int nota){
         
         
-            for (int i=0; i<notas.length;i++){
-            notas[i]=nota;
-          
-        
+            while(ind<notas.length){
+                notas[ind]=nota;
+                ind++;
             }
-    }
+            
+            
+            System.out.println(Arrays.toString(notas));
+            }
+
+    
     
     
     
