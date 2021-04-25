@@ -3,15 +3,19 @@ package problema6proyectoJosephGranados;
 public class SistemaNotasControlador {
 
     private SistemaNotasReporte Report;
-    private  SistemaNotasInterfaz Inter;
+    private  SistemaNotasInterfaz Inter = new SistemaNotasInterfaz();
     
     
     
     public void iniciar(){
-       
-        Inter= new SistemaNotasInterfaz();
-        Report= new SistemaNotasReporte(Inter.generarEst());
-        Inter.imprimir();
+        //Agregar el lenght al array
+      Inter.generarEst();
+      Report= new SistemaNotasReporte(Inter.cantEst);
+      
+      //AGREGAMOS LAS NOTAS AL ARRAY
+      Inter.digitarNota();
+      Report.agregarNota(Inter.nota);
+        
  
         
     }

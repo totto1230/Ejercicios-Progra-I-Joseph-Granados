@@ -10,27 +10,33 @@ package problema6proyectoJosephGranados;
  * @author josep
  */
 public class SistemaNotasReporte {
-    protected int [] notas;
+    public int [] notas;
     int ind;
     
-    public SistemaNotasReporte() {
+   public SistemaNotasReporte() {
     }
 
+    /**
+     *Guardan la cantidad de espacios del arreglo dependiendo del numero de est
+     * @param CantEst
+     */
+    
+    //Metodo constructor para guardar espacis
     public SistemaNotasReporte(int CantEst) {
         this.notas= new int[CantEst];
-        ind=0;
+       
     }
     
     
     
     public void agregarNota(int nota){
         
-        for(int i=0; i<notas.length; i++){
-            
+        
+            for (int i=0; i<notas.length;i++){
             notas[i]=nota;
-       }
+          
         
-        
+            }
     }
     
     

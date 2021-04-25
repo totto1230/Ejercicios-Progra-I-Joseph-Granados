@@ -3,30 +3,27 @@ package problema6proyectoJosephGranados;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SistemaNotasInterfaz {
-
-    private int cantEst;
-    private SistemaNotasReporte impri = new SistemaNotasReporte();
-    // public int nota;
-
+public class SistemaNotasInterfaz  {
+    public int nota;
+    public int cantEst;
+    SistemaNotasReporte impr;
+    Scanner s = new Scanner(System.in);
+    
+    
     public int generarEst() {
-        Scanner s = new Scanner(System.in);
+        
         System.out.println("Ingrese la Cantidad de Estudiantes que tiene: ");
         return this.cantEst = s.nextInt();
-
+        
     }
-
-    public int ingresarNota() {
-        Scanner s = new Scanner(System.in);
-
-        System.out.println("Ingrese la cantidad del Estudiante: ");
-        return 0;
-
+    
+    public int digitarNota(){
+        nota=s.nextInt();
+        return nota;
+         
     }
-
-    public void imprimir() {
-        System.out.println((impri.notas.length));
-
-    }
-
+    
+    
+   
+ 
 }
