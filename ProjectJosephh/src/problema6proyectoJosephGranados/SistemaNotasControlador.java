@@ -9,6 +9,6 @@ package problema6proyectoJosephGranados;
  *
  * @author josep
  */
-public class VistaNotas {
-    
+public class SistemaNotasControlador {
+
 }
