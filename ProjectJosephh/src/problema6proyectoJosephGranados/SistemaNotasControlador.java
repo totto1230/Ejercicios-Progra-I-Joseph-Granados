@@ -8,7 +8,7 @@ public class SistemaNotasControlador {
     private final SistemaNotasInterfaz Inter = new SistemaNotasInterfaz();
 
     public void iniciar() {
-        //Esta variable sirve para digitar N veces el valor en el ARRAY
+        //Estas variables sirven para digitar N veces el valor en el ARRAY
         int i = 0;
         int j = 0;
 
@@ -24,7 +24,7 @@ public class SistemaNotasControlador {
         }
 
         //Sirve para ordenar el array de mayor a menor
-        Report.generarReporteTodosExamenes(Report.notas);
+        Report.generarReporteTodosExamenesOrdenadosPor(Report.notas);
 
         //Agregar el lenght al array de nombres; es decir, reservar espacio
         Report.guardarCampAlum(Inter.cantEst);

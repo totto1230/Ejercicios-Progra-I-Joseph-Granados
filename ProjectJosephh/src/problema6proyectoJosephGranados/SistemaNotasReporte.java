@@ -68,7 +68,7 @@ public class SistemaNotasReporte {
      * utiliza el famoso bubblesort para ordenarlo de mayor a menor. En pocas
      * palabras este metodo es estadistico.
      */
-    public void generarReporteTodosExamenes(int[] array) {
+    public void generarReporteTodosExamenesOrdenadosPor(int[] array) {
         int suma = 0;
         int n = array.length;
         int temp = 0;
@@ -112,14 +112,7 @@ public class SistemaNotasReporte {
 
     }
 
-    /*
-   Ordena las Notas por Nota Ascendiente
-     */
-    public String generarReporteTodosExamenesOrdenadosPor(String propiedad) {
-
-        return null;
-
-    }
+   
 
     /**
      * metodo GET
