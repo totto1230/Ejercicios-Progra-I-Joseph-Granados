@@ -44,17 +44,17 @@ public class SistemaNotasInterfaz {
     }
     
     public void informacionEstu(String[] name, String nameP[]){
-        System.out.println("Sus estudiantes son: ");
+        
         int i=0;
         while(i<name.length){
+            System.out.print("El estudiante numero "+ (i+1)+ " es ");
             System.out.println(name[i]);
             System.out.println("El papa del estudiante "+ name[i]+" es " +nameP[i]);
             i++;
             }
        }
     
-    
-   /**
+    /**
      * Este método sirve para imprimir la nota más baja y la más alta, el array
      * digitado, y el promedio
      *
