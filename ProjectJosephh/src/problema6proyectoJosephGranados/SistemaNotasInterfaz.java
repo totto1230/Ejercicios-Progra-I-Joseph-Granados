@@ -26,7 +26,7 @@ public class SistemaNotasInterfaz {
     }
     
     public void digitarnName(){
-        System.out.println("Digite el nomnbre el estudiante: ");
+        System.out.println("Digite el nombre el estudiante: ");
         nombre= s.next();
         
     }
@@ -37,7 +37,7 @@ public class SistemaNotasInterfaz {
      * @param promedio
      * @param name
      */
-    public void imprimir(int[] array, double promedio, String[] name){
+    public void imprimir(int[] array, double promedio, String[] name, int setenta){
       int a= array.length;
       
       for (int i=0;i<a; i++ ){
@@ -50,6 +50,7 @@ public class SistemaNotasInterfaz {
       System.out.println("La nota más alta fue: "+ array [(a-1)]);
       System.out.println("La nota más baja fue: "+ array[0]);
       System.out.println("El promedio de las notas es: "+ promedio );
+      System.out.println("En total hay "+ setenta+ " notas menores a 70");
       System.out.println("---------------------------------------");
   } 
    

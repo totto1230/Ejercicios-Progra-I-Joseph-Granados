@@ -20,6 +20,7 @@ public class SistemaNotasControlador {
         while (i < Report.notas.length) {
             Inter.digitarNota();
             Report.agregarNota(Inter.nota);
+            Report.generarReporteAlumnosConNotaInferiorA(Inter.nota);
             i++;
         }
 
@@ -36,7 +37,7 @@ public class SistemaNotasControlador {
             j++;
         }
         //Impresión del ARRAY
-        Inter.imprimir(Report.notas, Report.promedio, Report.nombresAlum);
+        Inter.imprimir(Report.notas, Report.promedio, Report.nombresAlum, Report.contador);
 
     }
 

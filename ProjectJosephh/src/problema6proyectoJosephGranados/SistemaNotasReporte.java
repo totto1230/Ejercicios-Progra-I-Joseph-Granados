@@ -12,7 +12,7 @@ import java.util.Arrays;
  * @author josep
  */
 public class SistemaNotasReporte {
-
+    public int contador;
     public double promedio;
     public int[] notas;
     private int ind;
@@ -104,12 +104,19 @@ public class SistemaNotasReporte {
     }
 
     /**
-     * Muestra las notas más bajas a 70
+     * Cuenta las notas menores a 70
+     * @return 
      */
-    public String generarReporteAlumnosConNotaInferiorA(int nota) {
-
-        return null;
-
+    public int generarReporteAlumnosConNotaInferiorA(int nota) {
+        
+        if (nota<70){
+            contador++;
+            
+        }
+        else{
+            contador=+0;
+        }
+       return contador;
     }
 
    
