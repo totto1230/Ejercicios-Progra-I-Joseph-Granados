@@ -36,24 +36,22 @@ public class SistemaNotasInterfaz {
     public void digitarNameP(String[] nameA) {
         int i = 0;
            
-            System.out.println("Digite el nombre del Papa del alumno: " + nameA[i]);
+            System.out.println("Digite el nombre del Papa del alumno " + nameA[i]);
             i++;
             nombreP = s.next();
             
           
     }
     
-    
     public void informacionEstu(String[] name, String nameP[]){
         System.out.println("Sus estudiantes son: ");
         int i=0;
         while(i<name.length){
             System.out.println(name[i]);
-            System.out.println("El papa es: " +nameP[i]);
+            System.out.println("El papa del estudiante "+ name[i]+" es " +nameP[i]);
             i++;
             }
        }
-    
     
     
    /**

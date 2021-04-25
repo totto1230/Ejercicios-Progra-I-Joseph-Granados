@@ -33,9 +33,9 @@ public class SistemaNotasReporte {
      */
     public void guardarCampAlum(int CantEst) {
         this.nombresAlum = new String[CantEst];
-        this.nombresPapas = new String[CantEst];
+
         indd = 0;
-        inddd = 0;
+
     }
 
     public void guardarCampPap(int CantEst) {
@@ -125,7 +125,7 @@ public class SistemaNotasReporte {
         } else {
             contador = +0;
         }
-       
+
     }
 
     /**
