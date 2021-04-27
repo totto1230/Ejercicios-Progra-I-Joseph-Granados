@@ -5,12 +5,13 @@ import java.util.Scanner;
 
 public class SistemaNotasInterfaz {
 
+    int continuar;
     int opcionMenu;
     String nombre;
     String nombreP;
     int nota;
     public int cantEst;
-    //SistemaNotasReporte model = new SistemaNotasReporte();
+    SistemaNotasReporte model = new SistemaNotasReporte();
 
     Scanner s = new Scanner(System.in);
 
@@ -44,10 +45,16 @@ public class SistemaNotasInterfaz {
 
     }
 
+    public int impriCont() {
+        System.out.println("Desea continuar? 1= Deseo continuar, >2 Deseo retirarme");
+        return this.continuar = s.nextInt();
+
+    }
+
     public void digitarNameP(String[] nameA) {
         int i = 0;
 
-        System.out.println("Digite el nombre del Papa del alumno " + nameA[i]);
+        System.out.println("Digite el nombre del Papa/Mama del alumno " + nameA[i]);
         i++;
         nombreP = s.next();
 
@@ -100,6 +107,11 @@ public class SistemaNotasInterfaz {
             System.out.println("  es " + array[i]);
         }
 
+    }
+    
+    public void arrayOrdenado(int []array){
+        System.out.println(Arrays.toString(model.notas));
+        
     }
 
 }

@@ -12,10 +12,13 @@ public class SistemaNotasControlador {
     private int k = 0;
 
     public void iniciar() {
+        int cont=1;
         int option=0;
         //Agregar el lenght al array; es decir, reservar espacio
         Inter.generarEst();
         Report = new SistemaNotasReporte(Inter.cantEst);
+      
+        while(cont==1){
         //IMPRIMIR OPCIONES Y GENERAR LA OPCION
         Inter.imprimir_opcion();
         option= Inter.generarOp();
@@ -23,7 +26,7 @@ public class SistemaNotasControlador {
         switch (option) {
             /*      OPTIONS:
             
-            1. AGREGAR NOTAS, 2. Ordenar Notas de Mayor a menor, 3. AGREGAR LOS NOMBRES , 4. IMPRIMIR NOTAS, 5. GENERAR REPORTE DE ESTADISTICAS, 6. IMPRIMIR INFO DEL ESTUDIANTE
+            1. AGREGAR NOTAS, 2. AGREGAR LOS NOMBRES , 3. IMPRIMIR NOTAS, 4. GENERAR REPORTE DE ESTADISTICAS, 2. IMPRIMIR INFO DEL ESTUDIANTE
             
                 
              */
@@ -44,6 +47,7 @@ public class SistemaNotasControlador {
             case 2:
                 //Sirve para ordenar el array de mayor a menor
                 Report.generarReporteTodosExamenesOrdenadosPor(Report.notas);
+                Inter.arrayOrdenado(Report.notas);
 
                 break;
             case 3:
@@ -79,10 +83,12 @@ public class SistemaNotasControlador {
                 //IMPRIMIR INFORMACION ESTU
                 Inter.informacionEstu(Report.nombresAlum, Report.nombresPapas);
                 break;
-
+            default:
+               
         }
-       
+       cont= Inter.impriCont();
 
+    }
     }
 
 }
