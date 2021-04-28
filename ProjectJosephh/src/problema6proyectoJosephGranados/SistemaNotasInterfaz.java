@@ -2,9 +2,20 @@ package problema6proyectoJosephGranados;
 
 import java.util.Arrays;
 import java.util.Scanner;
-//El diagrama UML fue subido acá: https://drive.google.com/drive/folders/1vVy5UmQwwKEpI6TGjkd6aKisMZBbpVsc?usp=sharing
-public class SistemaNotasInterfaz {
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
+//El diagrama UML fue subido acá: https://drive.google.com/drive/folders/1vVy5UmQwwKEpI6TGjkd6aKisMZBbpVsc?usp=sharing
+public class SistemaNotasInterfaz extends JFrame {
+
+    JFrame frame;
+    JButton boton;
+    JButton boton1;
+    JButton boton2;
+    JButton boton3;
+    JButton boton4;
+    JButton boton5;
+    int modo = 0;
     int continuar;
     int opcionMenu;
     String nombre;
@@ -19,7 +30,8 @@ public class SistemaNotasInterfaz {
         this.opcionMenu = s.nextInt();
         return opcionMenu;
     }
-    public void errorDigitar(){
+
+    public void errorDigitar() {
         System.out.println("Ingrese un valor valido, 0-100!");
     }
 
@@ -28,6 +40,40 @@ public class SistemaNotasInterfaz {
         System.out.println("Qué desea hacer?");
         System.out.println(" ");
         System.out.println(" 1. Ordenar Notas de Mayor a menor, 2. AGREGAR LOS NOMBRES , 3. IMPRIMIR NOTAS, 4. GENERAR REPORTE DE ESTADISTICAS, 5. IMPRIMIR INFO DEL ESTUDIANTE");
+        System.out.println(" ");
+
+    }
+
+    public void modoGrafico() {
+        // 1. Ordenar Notas de Mayor a menor, 2. AGREGAR LOS NOMBRES , 3. IMPRIMIR NOTAS, 4. GENERAR REPORTE DE ESTADISTICAS, 5. IMPRIMIR INFO DEL ESTUDIANTE
+        boton = new JButton("AGREGAR ESTUDIANTES Y NOTAS");
+        boton.setBounds(50, 100, 500, 200);
+        add(boton);
+        boton1 = new JButton("Ordenar Notas de Mayor a menor");
+        boton1.setBounds(100, 50, 100, 100);
+        add(boton1);
+        boton2 = new JButton("AGREGAR LOS NOMBRES");
+        boton2.setBounds(200, 50, 100, 100);
+        add(boton2);
+        boton3 = new JButton("IMPRIMIR NOTAS");
+        boton3.setBounds(50, 200, 100, 100);
+        add(boton3);
+        boton4 = new JButton("GENERAR REPORTE DE ESTADISTICAS");
+        add(boton4);
+        boton5 = new JButton("IMPRIMIR INFO DEL ESTUDIANTE");
+        boton5.setBounds(300, 300, 100, 100);
+        add(boton5);
+        
+        setSize(100, 100);
+        setLayout(null);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+    }
+
+    public void elegirModo() {
+        System.out.println("Qué modo desea elegir? \n 1. Modo gráfico, 2. Por la consola");
+        modo = s.nextInt();
 
     }
 
@@ -118,11 +164,11 @@ public class SistemaNotasInterfaz {
     public void welcome() {
         System.out.println("---------------------------------------");
         System.out.println(" ");
-        System.out.println("Bienvenidos al programa para organizar mejor las notas");
+        System.out.println("Bienvenidos al mejor programa para organizar mejor las notas y ayudar a los profesores a organizar las notas");
         System.out.println(" ");
         System.out.println("Dev: Joseph Granados");
         System.out.println(" ");
-        System.out.println("Para poder iniciar el programa por favor");
+
     }
 
     /**
@@ -135,14 +181,16 @@ public class SistemaNotasInterfaz {
         int a = array.length;
 
         for (int i = 0; i < a; i++) {
+            System.out.println(" ");
             System.out.print(" La nota del estudiante " + name[i]);
             System.out.println("  es " + array[i]);
+            System.out.println(" ");
         }
 
     }
 
-    public void arrayOrdenado(int[]array) {
-        
+    public void arrayOrdenado(int[] array) {
+
         System.out.println(Arrays.toString(array));
 
     }
