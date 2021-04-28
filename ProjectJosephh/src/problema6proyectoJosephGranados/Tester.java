@@ -4,11 +4,7 @@
  * and open the template in the editor.
  */
 package problema6proyectoJosephGranados;
-
-/**
- *
- * @author josep
- */
+//El diagrama UML fue subido acá: https://drive.google.com/drive/folders/1vVy5UmQwwKEpI6TGjkd6aKisMZBbpVsc?usp=sharing
 public class Tester {
     public static void main(String[] args) {
         

@@ -7,10 +7,7 @@ package problema6proyectoJosephGranados;
 
 import java.util.Arrays;
 
-/**
- *
- * @author josep
- */
+//El diagrama UML fue subido acá: https://drive.google.com/drive/folders/1vVy5UmQwwKEpI6TGjkd6aKisMZBbpVsc?usp=sharing
 public class SistemaNotasReporte {
 
     public int contador;

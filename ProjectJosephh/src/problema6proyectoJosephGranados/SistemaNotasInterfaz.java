@@ -2,7 +2,7 @@ package problema6proyectoJosephGranados;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+//El diagrama UML fue subido acá: https://drive.google.com/drive/folders/1vVy5UmQwwKEpI6TGjkd6aKisMZBbpVsc?usp=sharing
 public class SistemaNotasInterfaz {
 
     int continuar;

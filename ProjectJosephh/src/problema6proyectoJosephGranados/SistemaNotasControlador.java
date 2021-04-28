@@ -1,6 +1,9 @@
 package problema6proyectoJosephGranados;
 
 import java.util.Arrays;
+//El diagrama UML fue subido acá: https://drive.google.com/drive/folders/1vVy5UmQwwKEpI6TGjkd6aKisMZBbpVsc?usp=sharing
+
+
 
 public class SistemaNotasControlador {
 
@@ -16,6 +19,7 @@ public class SistemaNotasControlador {
         Inter.welcome();
         int cont = 1;
         int option = 0;
+        
         //Agregar el lenght al array; es decir, reservar espacio
         Inter.generarEst();
 
