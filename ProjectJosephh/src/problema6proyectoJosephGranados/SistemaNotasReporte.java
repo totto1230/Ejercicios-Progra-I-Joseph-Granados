@@ -78,7 +78,7 @@ public class SistemaNotasReporte {
      * Metodo para Agregar las notas al array
      */
     public void agregarNota(int nota) {
-
+        
         notas[ind] = nota;
         ind++;
 
@@ -86,10 +86,11 @@ public class SistemaNotasReporte {
 
     /**
      * Metodo para calcular la nota promedio, la más alta y la más baja Se
-     * utiliza el famoso bubblesort para ordenarlo de mayor a menor. En pocas
-     * palabras este metodo es estadistico.
+     * utiliza el famoso bubblesort para ordenarlo de mayor a menor.En pocas
+ palabras este metodo es estadistico.
+     * @param array
      */
-    public void generarReporteTodosExamenesOrdenadosPor(int[] array) {
+    public void generarReporteTodosExamenesOrdenadosPor(int[]array) {
         int suma = 0;
         int n = array.length;
         int temp = 0;
