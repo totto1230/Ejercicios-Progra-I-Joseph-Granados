@@ -1,8 +1,6 @@
 package problema6proyectoJosephGranados;
 
-
 //El diagrama UML fue subido acá: https://drive.google.com/drive/folders/1vVy5UmQwwKEpI6TGjkd6aKisMZBbpVsc?usp=sharing
-
 public class SistemaNotasControlador {
 
     private SistemaNotasReporte Report;
@@ -18,15 +16,35 @@ public class SistemaNotasControlador {
         Inter.welcome();
         //Elegir el modo
         Inter.elegirModo();
-        
-        if(Inter.modo==1){
-            Inter.modoGrafico();
+
+        if (Inter.modo == 1) {
+            //Agregar el lenght al array; es decir, reservar espacio
+            Inter.ingresarEstuGra();
             
-        }
-        
-    
-        if (Inter.modo == 2) {
+            //AGREGAMOS LAS NOTAS AL ARRAY
+            Report = new SistemaNotasReporte(Inter.cantEst);
+            while (i < Report.notas.length) {
+                Inter.agregarNotaGra();
+                if (Inter.nota > 100) {
+                    Inter.errorDigitarGra();
+                    Inter.agregarNotaGra();
+                    Report.generarReporteAlumnosConNotaInferiorA(Inter.nota);
+                    Report.agregarNota(Inter.nota);
+                } else {
+                    Report.generarReporteAlumnosConNotaInferiorA(Inter.nota);
+                    Report.agregarNota(Inter.nota);
+
+                }
+                i++;
+            }
+            
+           Inter.modoGrafico();
            
+
+        }
+
+        if (Inter.modo == 2) {
+
             cont = 1;
             int option = 0;
 
@@ -111,7 +129,7 @@ public class SistemaNotasControlador {
 
             }
         }
-       
+
     }
 
 }
