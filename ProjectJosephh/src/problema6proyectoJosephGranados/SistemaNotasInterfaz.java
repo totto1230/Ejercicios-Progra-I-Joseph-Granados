@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 //El diagrama UML fue subido acá: https://drive.google.com/drive/folders/1vVy5UmQwwKEpI6TGjkd6aKisMZBbpVsc?usp=sharing
 public class SistemaNotasInterfaz extends JFrame {
@@ -46,28 +47,32 @@ public class SistemaNotasInterfaz extends JFrame {
 
     public void modoGrafico() {
         // 1. Ordenar Notas de Mayor a menor, 2. AGREGAR LOS NOMBRES , 3. IMPRIMIR NOTAS, 4. GENERAR REPORTE DE ESTADISTICAS, 5. IMPRIMIR INFO DEL ESTUDIANTE
+        this.setTitle("Mejor programa para organizar mejor las notas");
+        setSize(1000, 1000);
+        setLayout(null);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        JLabel eti = new JLabel();
+        eti.setText("Bienvenidos al mejor programa para organizar mejor las notas y ayudar a los profesores a organizar las notas \n Dev: Joseph Granados\n Opciones del programa: \n   ");
+        eti.setBounds(0, 0, 1000, 1000);
+        add(eti);
         boton = new JButton("AGREGAR ESTUDIANTES Y NOTAS");
-        boton.setBounds(50, 100, 500, 200);
+        boton.setBounds(300, 200, 400, 100);
         add(boton);
         boton1 = new JButton("Ordenar Notas de Mayor a menor");
-        boton1.setBounds(100, 50, 100, 100);
+        boton1.setBounds(300, 300, 400, 100);
         add(boton1);
         boton2 = new JButton("AGREGAR LOS NOMBRES");
-        boton2.setBounds(200, 50, 100, 100);
+        boton2.setBounds(300, 400, 400, 100);
         add(boton2);
         boton3 = new JButton("IMPRIMIR NOTAS");
-        boton3.setBounds(50, 200, 100, 100);
+        boton3.setBounds(300, 500, 400, 100);
         add(boton3);
         boton4 = new JButton("GENERAR REPORTE DE ESTADISTICAS");
         add(boton4);
         boton5 = new JButton("IMPRIMIR INFO DEL ESTUDIANTE");
-        boton5.setBounds(300, 300, 100, 100);
+        boton5.setBounds(300, 600, 400, 100);
         add(boton5);
-        
-        setSize(100, 100);
-        setLayout(null);
-        setVisible(true);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }
 
