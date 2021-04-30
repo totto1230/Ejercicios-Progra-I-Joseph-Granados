@@ -141,12 +141,6 @@ public class SistemaNotasInterfaz extends JFrame {
 
             }
         };
-        ActionListener oyente5 = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        };
 
         //AGREGAR BOTONES
         boton1 = new JButton("Ordenar Notas de Mayor a menor");
@@ -171,12 +165,6 @@ public class SistemaNotasInterfaz extends JFrame {
         boton4.setBackground(Color.LIGHT_GRAY);
         add(boton4);
         boton4.addActionListener(oyente4);
-
-        boton5 = new JButton("IMPRIMIR INFO DEL ESTUDIANTE");
-        boton5.setBounds(300, 600, 400, 100);
-        boton5.setBackground(Color.LIGHT_GRAY);
-        add(boton5);
-        boton5.addActionListener(oyente5);
 
     }
 
@@ -299,8 +287,9 @@ public class SistemaNotasInterfaz extends JFrame {
         int i = 0;
         System.out.println(" ");
         System.out.println("Digite el nombre del Papa/Mama del alumno " + nameA[i]);
-        System.out.println(" ");
         i++;
+        System.out.println(" ");
+
         nombreP = s.next();
 
     }

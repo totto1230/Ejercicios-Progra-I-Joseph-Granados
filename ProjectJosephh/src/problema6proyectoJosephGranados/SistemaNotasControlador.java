@@ -92,7 +92,8 @@ public class SistemaNotasControlador {
                 //IMPRIMIR OPCIONES Y GENERAR LA OPCION
                 Inter.imprimir_opcion();
                 option = Inter.generarOp();
-
+                System.out.println(Report.contador);
+                System.out.println(Report.promedio);
                 switch (option) {
                     /*      OPTIONS:
             

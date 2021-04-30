@@ -111,23 +111,24 @@ public class SistemaNotasReporte {
 
         }
         this.promedio = suma / array.length;
-
+       
     }
 
     /**
      * Cuenta las notas menores a 70
      *
+     * @param nota
      * @return
      */
     public void generarReporteAlumnosConNotaInferiorA(int nota) {
 
         if (nota < 70) {
-            contador++;
+            this.contador++;
 
         } else {
-            contador = +0;
+            this.contador = +0;
         }
-
+        
     }
 
     /**
