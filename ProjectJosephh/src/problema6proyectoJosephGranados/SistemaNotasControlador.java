@@ -1,6 +1,8 @@
 package problema6proyectoJosephGranados;
 
 //El diagrama UML fue subido acá: https://drive.google.com/drive/folders/1vVy5UmQwwKEpI6TGjkd6aKisMZBbpVsc?usp=sharing
+import java.util.Arrays;
+
 public class SistemaNotasControlador {
 
     private SistemaNotasReporte Report;
@@ -20,7 +22,7 @@ public class SistemaNotasControlador {
         if (Inter.modo == 1) {
             //Agregar el lenght al array; es decir, reservar espacio
             Inter.ingresarEstuGra();
-            
+
             //AGREGAMOS LAS NOTAS AL ARRAY
             Report = new SistemaNotasReporte(Inter.cantEst);
             while (i < Report.notas.length) {
@@ -37,10 +39,29 @@ public class SistemaNotasControlador {
                 }
                 i++;
             }
-            
-           Inter.modoGrafico();
-           
 
+            //Agregar el length al array de nombres; es decir, reservar espacio
+        /*    Report.guardarCampAlum(Inter.cantEst);
+            Report.guardarCampPap(Inter.cantEst);
+
+            //AGREGAMOS NOMBRES
+            while (j < Report.nombresAlum.length) {
+                Inter.digitarNameGra();
+                Report.agregarNombreAlum(Inter.nombre);
+                j++;
+            }
+
+            //AGREGAMOS Nombres PAPAS
+            while (k < Report.nombresPapas.length) {
+                Inter.digitarNamePaGra();
+                Report.agregarNombrePap(Inter.nombreP);
+
+                k++;
+            }*/
+
+            Inter.agregarEtis();
+            Inter.agregarBoton(Report.notas, Report.promedio, Report.contador);
+            
         }
 
         if (Inter.modo == 2) {

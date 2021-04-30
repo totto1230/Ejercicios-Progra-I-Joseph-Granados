@@ -19,6 +19,10 @@ public class SistemaNotasReporte {
     public String[] nombresAlum;
     public String[] nombresPapas;
 
+    public int[] getNotas() {
+        return notas;
+    }
+
     /**
      * Metodo constructor default
      */
