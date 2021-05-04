@@ -5,18 +5,22 @@
  */
 package examenFinalProgra1JosephGranados;
 
+import java.util.Date;
+
 /**
  *
  * @author josep
  */
 public class Reloj {
 
+    
     int Alarm;
     int hora;
     int min;
 
-    public void setAlarm(int Alarm) {
-        this.Alarm = Alarm;
+    public void setAlarm(int horas, int minutos) {
+        
+
     }
 
     public int getHora() {

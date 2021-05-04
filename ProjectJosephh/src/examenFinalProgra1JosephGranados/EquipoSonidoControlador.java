@@ -98,7 +98,8 @@ public class EquipoSonidoControlador {
                         vista.volumeImpre(vista.volume);
                         break;
                     case 8:
-
+                        vista.obtenerMinHoras();
+                        modelo = new EquipoSonido(vista.hora, vista.minutos);
                         break;
 
                 }

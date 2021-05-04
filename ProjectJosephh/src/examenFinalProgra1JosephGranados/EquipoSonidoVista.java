@@ -17,10 +17,12 @@ import javax.swing.JLabel;
  */
 public class EquipoSonidoVista {
 
+    protected int hora;
+    protected int minutos;
     protected int opcionInicio;
-    private JFrame frame = new JFrame();
-    private JLabel eti = new JLabel();
-    private JLabel eti2 = new JLabel();
+    private final JFrame frame = new JFrame();
+    private final JLabel eti = new JLabel();
+    private final JLabel eti2 = new JLabel();
     protected int optionContinue = 1;
     protected int cancionNumber = 0;
     protected String pedirCancionInicio;
@@ -30,7 +32,16 @@ public class EquipoSonidoVista {
     protected int opcionDesabilitar = 0;
     protected int optionDelete = 0;
     protected int volume = 5;
-    private Scanner s = new Scanner(System.in);
+    private final Scanner s = new Scanner(System.in);
+    Reloj reloj;
+
+    public void obtenerMinHoras() {
+
+        System.out.println("Digite la hora a la que quiere que suene el radio");
+        hora = s.nextInt();
+        System.out.println("Digite los minutos a los que quiere que suene el radio");
+        minutos = s.nextInt();
+    }
 
     public EquipoSonidoVista() {
     }
