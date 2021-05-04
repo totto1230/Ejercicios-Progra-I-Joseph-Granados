@@ -18,10 +18,6 @@ public class EquipoSonido {
     public EquipoSonido() {
     }
 
-    public EquipoSonido(int hora, int min) {
-        reloj.setAlarm(hora, min);
-    }
-
     public void guardarEspacio(int a) {
 
         this.songs = new String[a];
@@ -40,15 +36,13 @@ public class EquipoSonido {
     }
 
     public String[] arrayRandom(String[] array) {
-        
+
         int a = array.length - 1;
         String b = array[a];
-        for (int j = a; j>0; j--) {
-           
-            
-            
+        for (int j = a; j > 0; j--) {
+
         }
-       
+
         return this.songs = array;
     }
 

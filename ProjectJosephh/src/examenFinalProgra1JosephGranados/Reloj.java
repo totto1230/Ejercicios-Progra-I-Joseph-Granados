@@ -13,14 +13,14 @@ import java.util.Date;
  */
 public class Reloj {
 
-    
+    EquipoSonidoVista vista;
     int Alarm;
     int hora;
     int min;
 
     public void setAlarm(int horas, int minutos) {
-        
-
+        vista = new EquipoSonidoVista();
+        vista.imprmirAlarm(horas, minutos);
     }
 
     public int getHora() {

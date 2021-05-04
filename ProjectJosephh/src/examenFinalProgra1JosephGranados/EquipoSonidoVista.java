@@ -33,7 +33,7 @@ public class EquipoSonidoVista {
     protected int optionDelete = 0;
     protected int volume = 5;
     private final Scanner s = new Scanner(System.in);
-    Reloj reloj;
+    public Reloj reloj;
 
     public void obtenerMinHoras() {
 
@@ -52,12 +52,6 @@ public class EquipoSonidoVista {
 
     }
 
-    /* public void cancionElegida() {
-        System.out.println("Que numero de la cancion quiere elegir: ");
-        cancionElegida = s.nextInt();
-
-        
-    }*/
     public void radio() {
         frame.setBounds(500, 500, 500, 500);
         frame.setVisible(true);
@@ -180,6 +174,11 @@ public class EquipoSonidoVista {
     public void mostrarLista(String[] canciones) {
 
         System.out.println("La lista completa de canciones es la siguiente: " + Arrays.toString(canciones));
+    }
+
+    public void imprmirAlarm(int a, int b) {
+        System.out.println("Su alarma fue puesta a las: " + a + ":" + b);
+
     }
 
 }

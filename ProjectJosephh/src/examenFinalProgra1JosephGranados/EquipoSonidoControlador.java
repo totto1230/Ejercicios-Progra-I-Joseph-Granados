@@ -6,6 +6,7 @@ public class EquipoSonidoControlador {
 
     private EquipoSonidoVista vista = new EquipoSonidoVista();
     private EquipoSonido modelo = new EquipoSonido();
+    private Reloj reloj;
 
     public void iniciar() {
         int i = 0;
@@ -99,7 +100,7 @@ public class EquipoSonidoControlador {
                         break;
                     case 8:
                         vista.obtenerMinHoras();
-                        modelo = new EquipoSonido(vista.hora, vista.minutos);
+                        reloj.setAlarm(vista.hora, vista.minutos);
                         break;
 
                 }
