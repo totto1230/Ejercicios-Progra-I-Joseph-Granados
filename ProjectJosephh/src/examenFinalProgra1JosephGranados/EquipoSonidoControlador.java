@@ -33,7 +33,7 @@ public class EquipoSonidoControlador {
                         vista.parlanteIz(modelo.songs);
                         vista.parlanteDere(modelo.songs);
                         vista.subwoofer(modelo.songs);
-
+                        vista.volumeImpre(vista.volume);
                         break;
                     case 2:
                         //RANDOM SONGS
@@ -41,6 +41,7 @@ public class EquipoSonidoControlador {
                         vista.parlanteIz(modelo.songs);
                         vista.parlanteDere(modelo.songs);
                         vista.subwoofer(modelo.songs);
+                        vista.volumeImpre(vista.volume);
 
                         break;
                     case 3:
