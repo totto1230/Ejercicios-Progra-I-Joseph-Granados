@@ -17,8 +17,8 @@ public class EquipoSonido {
     public EquipoSonido() {
     }
 
-    public void guardarEspacio() {
-        int a = 1000;
+    public void guardarEspacio(int a) {
+
         this.songs = new String[a];
         i = 0;
     }
@@ -28,11 +28,16 @@ public class EquipoSonido {
         i++;
 
     }
+    public void agregarCancionDesdeMenu(String cancion, int z) {
+        this.songs[z] = cancion;
+      
+    }
+    
 
     public String[] arrayRandom(String[] array) {
-
-        for (int i = 0; i < array.length; i++) {
-            array[i] = array[array.length - 1];
+        int a = array.length - 1;
+        int b = 0;
+        for (int j = 0; j < array.length; j++) {
 
         }
         return this.songs = array;

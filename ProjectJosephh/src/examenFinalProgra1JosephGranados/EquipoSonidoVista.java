@@ -7,13 +7,18 @@ package examenFinalProgra1JosephGranados;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 /**
  *
  * @author josep
  */
 public class EquipoSonidoVista {
-
+    JFrame frame;
+    JLabel eti;
+    int optionContinue = 1;
+    int cancionNumber = 0;
     String pedirCancionInicio;
     String cancion;
     int cancionElegida;
@@ -38,6 +43,17 @@ public class EquipoSonidoVista {
 
         
     }*/
+    public void radio(){
+        frame.setBounds(500, opcion, opcion, opcion);
+        
+    }
+    
+    public void optionContinue() {
+        System.out.println("Desea continuar? 1. Si deseo continuar, >2. Deseo salir");
+        optionContinue = s.nextInt();
+
+    }
+
     public void optionDelete() {
         System.out.println("Que numero de cancion desea eliminar?");
         optionDelete = s.nextInt();
@@ -48,10 +64,16 @@ public class EquipoSonidoVista {
     public void volume() {
         System.out.println("Por default el programa inicia en un volumen 5, desea bajarlo o subir? Valores permitidos: 1-10");
         volume = s.nextInt();
+
     }
 
     public void volumeImpre(int volume) {
         System.out.println("Los parlantes estan a un volumen de " + volume);
+
+    }
+
+    public void exit() {
+        System.out.println("Seleciono salir, no olvide depositar al dev mediante paypal para mejorar el programa");
 
     }
 
@@ -62,6 +84,8 @@ public class EquipoSonidoVista {
     public void welcome() {
         System.out.println("Bienvenido al mejor equipo de sonido.");
         System.out.println("Dev: Joseph Granados");
+        System.out.println("Cuantas canciones desea agregar? Max 1000, para tener acceso a mas canciones, escribir a joseph.granados@hotmail.com");
+        cancionNumber = s.nextInt();
         System.out.println("");
     }
 
@@ -71,7 +95,7 @@ public class EquipoSonidoVista {
     }
 
     public void desabilitar() {
-        System.out.println("Antes de reproducir la cancion, desea desabilitar algun parlante");
+        System.out.println("Que parlante(s)desea desabilitar?");
         System.out.println("1. Derecho, 2. Izquierdo, 3. subwoofer, 4. Todos, 5. Ninguno");
         this.opcionDesabilitar = s.nextInt();
         System.out.println("");
@@ -87,12 +111,16 @@ public class EquipoSonidoVista {
         System.out.println("5. Eliminar audio");
         System.out.println("6. Modificar Parlante");
         System.out.println("7. Subir o bajar volumen");
+        System.out.println("8. Escuchar la radio (Unica emisora de internet)");
+        System.out.println("9. Crear alarma de encendido");
+        System.out.println("10. Salir");
         System.out.println("");
     }
 
-    public void pedirCancionInicio() {
+    public void pedirCancionInicio(String[] array) {
         System.out.println("");
-        System.out.println("Para iniciar tu experiencia con buen pie, ingrese 3 canciones, mas adelante podras modificar tu playlist");
+        System.out.println("Para iniciar tu experiencia con buen pie, ingrese " + array.length + " canciones, mas adelante podras modificar tu playlist");
+
         pedirCancionInicio = s.next();
 
     }
