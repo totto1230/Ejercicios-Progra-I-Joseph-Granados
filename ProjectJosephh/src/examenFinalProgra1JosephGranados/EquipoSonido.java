@@ -11,16 +11,16 @@ package examenFinalProgra1JosephGranados;
  */
 public class EquipoSonido {
 
-    String[] songs;
-    int i;
+    protected String[] songs;
+    private int i;
 
     public EquipoSonido() {
     }
 
-    public void guardarEspacio(int a) {
-        a = 1000;
+    public void guardarEspacio() {
+        int a = 1000;
         this.songs = new String[a];
-        this.i = 0;
+        i = 0;
     }
 
     public void agregarCancion(String cancion) {
@@ -29,22 +29,17 @@ public class EquipoSonido {
 
     }
 
-    public void arrayRandom(String[] array) {
-        
-        int n = array.length;
-        int temp = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 1; j < (n - i); j++) {
-                if (array[j - 1] > array[j]) {
-                    temp= array[j-1];
-                    array = array[j - 1];
-                    array[j - 1] = array[j];
-                    array[j] = temp;
+    public String[] arrayRandom(String[] array) {
 
-                }
-            }
+        for (int i = 0; i < array.length; i++) {
+            array[i] = array[array.length - 1];
+
         }
-
+        return this.songs = array;
     }
 
+    public void delete(int delete) {
+        this.songs[delete] = "";
+
+    }
 }
