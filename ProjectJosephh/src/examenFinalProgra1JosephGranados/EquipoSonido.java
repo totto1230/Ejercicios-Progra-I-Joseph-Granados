@@ -11,7 +11,8 @@ package examenFinalProgra1JosephGranados;
  */
 public class EquipoSonido {
 
-    protected String[] songs;
+    Reloj reloj;
+    protected String[] songs = new String[1000];
     private int i;
 
     public EquipoSonido() {
@@ -28,18 +29,20 @@ public class EquipoSonido {
         i++;
 
     }
+
     public void agregarCancionDesdeMenu(String cancion, int z) {
         this.songs[z] = cancion;
-      
+
     }
-    
 
     public String[] arrayRandom(String[] array) {
-        int a = array.length - 1;
-        int b = 0;
-        for (int j = 0; j < array.length; j++) {
-
-        }
+       int a=array.length-1;
+       for( int j=0; j<array.length;j++){
+           array[i]=array[a];
+           a--;
+       } 
+        
+        
         return this.songs = array;
     }
 

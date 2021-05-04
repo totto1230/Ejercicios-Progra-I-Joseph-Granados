@@ -8,6 +8,7 @@ package examenFinalProgra1JosephGranados;
 import java.util.Arrays;
 import java.util.Scanner;
 import javax.swing.JFrame;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 
 /**
@@ -15,18 +16,21 @@ import javax.swing.JLabel;
  * @author josep
  */
 public class EquipoSonidoVista {
-    JFrame frame;
-    JLabel eti;
-    int optionContinue = 1;
-    int cancionNumber = 0;
-    String pedirCancionInicio;
-    String cancion;
-    int cancionElegida;
-    int opcion = 0;
-    int opcionDesabilitar = 0;
-    int optionDelete = 0;
-    int volume = 5;
-    Scanner s = new Scanner(System.in);
+
+    protected int opcionInicio;
+    private JFrame frame = new JFrame();
+    private JLabel eti = new JLabel();
+    private JLabel eti2 = new JLabel();
+    protected int optionContinue = 1;
+    protected int cancionNumber = 0;
+    protected String pedirCancionInicio;
+    protected String cancion;
+    protected int cancionElegida;
+    protected int opcion = 0;
+    protected int opcionDesabilitar = 0;
+    protected int optionDelete = 0;
+    protected int volume = 5;
+    private Scanner s = new Scanner(System.in);
 
     public EquipoSonidoVista() {
     }
@@ -43,11 +47,30 @@ public class EquipoSonidoVista {
 
         
     }*/
-    public void radio(){
-        frame.setBounds(500, opcion, opcion, opcion);
-        
+    public void radio() {
+        frame.setBounds(500, 500, 500, 500);
+        frame.setVisible(true);
+        eti.setText("BIENVENIDOS A LA RADIO 12.30, LA MEJOR RADIO DE CR");
+        eti2.setText("PARLANTES: MUSICA MUSICA MUSICA");
+        eti.setBounds(50, 100, 400, 200);
+        eti2.setBounds(150, 100, 400, 200);
+        frame.add(eti);
+        frame.add(eti2);
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
     }
-    
+
+    public void welcomee() {
+        System.out.println("");
+        System.out.println("Bienvenido al mejor equipo de sonido.");
+        System.out.println("Dev: Joseph Granados");
+        System.out.println("");
+        System.out.println("Para elegir la radio, type 1");
+        System.out.println("Para su equipo de sonido escriba otro numero");
+        opcionInicio = s.nextInt();
+        System.out.println("");
+    }
+
     public void optionContinue() {
         System.out.println("Desea continuar? 1. Si deseo continuar, >2. Deseo salir");
         optionContinue = s.nextInt();
@@ -82,8 +105,7 @@ public class EquipoSonidoVista {
     }
 
     public void welcome() {
-        System.out.println("Bienvenido al mejor equipo de sonido.");
-        System.out.println("Dev: Joseph Granados");
+
         System.out.println("Cuantas canciones desea agregar? Max 1000, para tener acceso a mas canciones, escribir a joseph.granados@hotmail.com");
         cancionNumber = s.nextInt();
         System.out.println("");
@@ -111,9 +133,7 @@ public class EquipoSonidoVista {
         System.out.println("5. Eliminar audio");
         System.out.println("6. Modificar Parlante");
         System.out.println("7. Subir o bajar volumen");
-        System.out.println("8. Escuchar la radio (Unica emisora de internet)");
-        System.out.println("9. Crear alarma de encendido");
-        System.out.println("10. Salir");
+        System.out.println("8. Crear alarma de encendido");
         System.out.println("");
     }
 
