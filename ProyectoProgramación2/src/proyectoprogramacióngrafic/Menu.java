@@ -15,11 +15,4 @@ public class Menu {
     public double totalB = 0;
     public double totalC = 0;
 
-    public void sacarPrecios(int seleccion, double precio[], int cant) {
-        int a = seleccion - 1;
-        double total = 0;
-        total = (this.totalC) + (precio[a] * cant);
-        this.totalC = total;
-
-    }
 }
