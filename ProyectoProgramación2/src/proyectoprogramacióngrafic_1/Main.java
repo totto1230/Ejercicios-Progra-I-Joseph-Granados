@@ -1,4 +1,4 @@
-package proyectoprogramacióngrafic;
+package proyectoprogramacióngrafic_1;
 
 public class Main {
 
